@@ -27,6 +27,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		
 		gvImages = (GridView) findViewById(R.id.gvPhotos);
 		photoAdapter = new PhotoArrayAdapter(this, new ArrayList<ImageResult>());
 
@@ -92,7 +94,7 @@ public class MainActivity extends Activity {
 							}
 						}
 
-						public void onFailure(Throwable e, JSONObject error) {
+						public void onFailure(Throwable e) {
 							// Handle the failure and alert the user to retry
 							Log.e("ERROR", e.toString());
 						}
